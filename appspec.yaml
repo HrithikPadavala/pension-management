@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-south-1:671745247161:task-definition/authorization-service:1"
+        LoadBalancerInfo:
+          ContainerName: "pensiondetail"
+          ContainerPort: "9090"
+        PlatformVersion: "LATEST"
